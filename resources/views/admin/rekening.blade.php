@@ -1,59 +1,7 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rekening - Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="icon" type="image/png" href="../../assets/image/icon.png">
-</head>
-<body>
-    <!-- sidebar mobile -->
-    <button class="toggle-btn" onclick="toggleSidebar()"><i class="bi bi-list"></i></button>
+@extends('admin.layouts.app')
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <div class="logo text-center">
-            <img src="../../assets/image/logo.png" alt="" class="pb-4">
-        </div>
-        <nav class="nav flex-column">
-            <a href="../admin/home.html" class="fs-12 nav-link">Dashboard</a>
 
-            <!-- Master Data dengan Dropdown -->
-            <a class="fs-12 nav-link align-items-center" data-bs-toggle="collapse" href="#masterDataMenu" role="button" aria-expanded="true" aria-controls="masterDataMenu">Master Data <i class="bi bi-chevron-down"></i></a>
-            <div class="collapse show ps-3" id="masterDataMenu">
-                <a href="../admin/fasilitas.html" class="fs-12 nav-link">Fasilitas</a>
-                <a href="../admin/gedung.html" class="fs-12 nav-link">Gedung</a>
-                <a href="../admin/lantai.html" class="fs-12 nav-link">Lantai</a>
-                <a href="../admin/addservices.html" class="fs-12 nav-link">Add Services</a>
-                <a href="../admin/overtime.html" class="fs-12 nav-link">OverTime</a>
-                <a href="../admin/ruangan.html" class="fs-12 nav-link">Ruangan</a>
-                <a href="../admin/billing.html" class="fs-12 nav-link">Billing</a>
-                <a href="../admin/penalti.html" class="fs-12 nav-link">Penalti</a>
-                <a href="../admin/denda.html" class="fs-12 nav-link">Denda</a>
-                <a href="../admin/tariflistrik.html" class="fs-12 nav-link">Tarif Listrik</a>
-                <a href="../admin/rekening.html" class="fs-12 nav-link active">Rekening</a>
-                <a href="../admin/pajak.html" class="fs-12 nav-link">Pajak</a>
-                <a href="../admin/materai.html" class="fs-12 nav-link">Materai</a>
-            </div>
-
-            <a href="#" class="fs-12 nav-link">Pengguna</a>
-            <a href="#" class="fs-12 nav-link">Tenant</a>
-            <a href="#" class="fs-12 nav-link">Lead Management</a>
-            <a href="#" class="fs-12 nav-link">Sewa</a>
-            <a href="#" class="fs-12 nav-link">Kontrak</a>
-            <a href="#" class="fs-12 nav-link">Billing</a>
-            <a href="#" class="fs-12 nav-link">Pembayaran</a>
-            <a href="#" class="fs-12 nav-link">Overtime</a>
-            <a href="#" class="fs-12 nav-link">Add Service</a>
-            <a href="#" class="fs-12 nav-link">Kuesioner</a>
-            <a href="#" class="fs-12 nav-link">Email Blast</a>
-            <a href="#" class="fs-12 nav-link">Ticket Support</a>
-        </nav>
-    </div>
+@section('content')
 
     <!-- main -->
      <div class="main-content p-3">
@@ -259,7 +207,6 @@
         </div>
      </div>
 
-    <script src="../../assets/js/main.js"></script>
+     <script src="{{ asset("assets/js/main.js") }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+@endsection

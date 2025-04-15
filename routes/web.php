@@ -31,6 +31,20 @@ Route::middleware(['auth', 'tenantMiddleware'])->group(function(){
 // admin
 Route::middleware(['auth', 'adminMiddleware'])->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/home', [AdminController::class, 'home'])->name('admin.home');
+    Route::get('/admin/fasilitas', [AdminController::class, 'fasilitas'])->name('admin.fasilitas');
+    Route::get('/admin/gedung', [AdminController::class, 'gedung'])->name('admin.gedung');
+    Route::get('/admin/lantai', [AdminController::class, 'lantai'])->name('admin.lantai');
+    Route::get('/admin/addservices', [AdminController::class, 'addservices'])->name('admin.addservices');
+    Route::get('/admin/overtime', [AdminController::class, 'overtime'])->name('admin.overtime');
+    Route::get('/admin/ruangan', [AdminController::class, 'ruangan'])->name('admin.ruangan');
+    Route::get('/admin/billing', [AdminController::class, 'billing'])->name('admin.billing');
+    Route::get('/admin/penalti', [AdminController::class, 'penalti'])->name('admin.penalti');
+    Route::get('/admin/denda', [AdminController::class, 'denda'])->name('admin.denda');
+    Route::get('/admin/tariflistrik', [AdminController::class, 'tariflistrik'])->name('admin.tariflistrik');
+    Route::get('/admin/rekening', [AdminController::class, 'rekening'])->name('admin.rekening');
+    Route::get('/admin/pajak', [AdminController::class, 'pajak'])->name('admin.pajak');
+    Route::get('/admin/materai', [AdminController::class, 'materai'])->name('admin.materai');
 });
 
 // teknik
